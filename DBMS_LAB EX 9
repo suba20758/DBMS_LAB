@@ -1,0 +1,49 @@
+
+
+// Key-Value Store Example (Redis-style)
+SET Name "Joe Bloggs"
+SET Age 42
+SET Occupation "Stunt Double"
+SET Height "175cm"
+SET Weight "77kg"
+
+OUTPUT:
+Name       : Joe Bloggs
+Age        : 42
+Occupation : Stunt Double
+Height     : 175cm
+Weight     : 77kg
+
+
+// Column-Based Store Example (Cassandra CQL)
+CREATE TABLE ColumnFamily (
+    RowKey text PRIMARY KEY,
+    col1 text,
+    col2 text,
+    col3 text
+);
+
+OUTPUT:
+Table ColumnFamily created successfully.
+
+
+// Document-Oriented Store Example (MongoDB)
+db.documents.insertMany([
+  { "prop1": "data", "prop2": "data", "prop3": "data", "prop4": "data" },
+  { "prop1": "data", "prop2": "data", "prop3": "data", "prop4": "data" },
+  { "prop1": "data", "prop2": "data", "prop3": "data", "prop4": "data" }
+]);
+
+OUTPUT:
+3 documents inserted successfully.
+
+
+// Graph-Based Store Example (Cypher / Neo4j)
+CREATE (p:Person {name:"Alice"})-[:LIVES_IN]->(c:City {name:"Chennai"})
+CREATE (p)-[:LIKES {rating:5}]->(r:Restaurant {name:"Spice House"})
+CREATE (r)-[:LOCATED_IN]->(c)
+
+OUTPUT:
+Alice LIVES_IN Chennai
+Alice LIKES Spice House (Rating: 5)
+Spice House LOCATED_IN Chennai
